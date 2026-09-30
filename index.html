@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <a class="brand" href="#home">Riththika</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#admin" id="adminLink">Admin</a></li>
+    </ul>
+    <button id="themeBtn" aria-label="Toggle theme">Dark</button>
+  </nav>
+</header>
+
+<main>
+  <section id="home" class="hero">
+    <h1>Hi, I'm  Riththika.<br>I build things for the web.</h1>
+    <p>AI & Data Science student passionate about building useful web applications and learning new technologies.</p>
+    <a class="btn" href="#contact">Contact me</a>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>
+Currently pursuing B.Tech in Artificial Intelligence and Data Science.
+Interested in web development, programming and emerging technologies.
+I enjoy learning new skills and building practical projects.
+My goal is to grow as a skilled software professional.
+</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li><li>Git and GitHub</li></ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <article class="card"><h3>Portfolio website</h3><p>Responsive site with theme toggle and a contact form stored in Google Sheets.</p></article>
+      <article class="card"><h3>React contact cards</h3><p>Single page app that adds user cards to a list.</p></article>
+      <article class="card"><h3>Like card</h3><p>React card component using props and the useState hook.</p></article>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact me</h2>
+    <form id="contactForm">
+      <label>Name <input name="name" required></label>
+      <label>Email <input name="email" type="email" required></label>
+      <label>Message <textarea name="message" rows="4" required></textarea></label>
+      <button class="btn" type="submit">Send message</button>
+      <p id="formMsg" role="status"></p>
+    </form>
+  </section>
+
+  <section id="admin" class="hidden">
+    <h2>Admin login</h2>
+    <form id="loginForm">
+      <label>Username <input id="user" required></label>
+      <label>Password <input id="pass" type="password" required></label>
+      <button class="btn" type="submit">Log in</button>
+      <p id="loginMsg" role="alert"></p>
+    </form>
+  </section>
+
+  <section id="responses" class="hidden">
+    <h2>User responses</h2>
+    <button class="btn" id="logoutBtn">Log out</button>
+    <div id="list"></div>
+  </section>
+</main>
+
+<footer><p>&copy; 2026  Riththika</p></footer>
+<script src="script.js"></script>
+</body>
+</html>
